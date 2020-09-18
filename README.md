@@ -11,7 +11,7 @@
 * [GitLab](https://gitlab.com/englishextra/englishgrammartips)
 * [SourceForge](https://sourceforge.net/p/rough-and-ready-grammar-tips/code)
 
-## Copyright
+## License
 
-© [github.com/englishextra](https://github.com/englishextra), 2015-2020
+Available under [MIT license](https://opensource.org/licenses/MIT).
 
