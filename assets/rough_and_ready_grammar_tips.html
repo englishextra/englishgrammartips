@@ -1,43 +1,17 @@
 <!DOCTYPE html>
-		<html lang="en">
+<!-- 1. use /tools/modularscale/index.html?15&px&1.25,1.125&web&text for font size and line height
+2. lazyload images
+3. remove font face, display block, opacity 1, visibility visible in critical inline css
+4. set font display swap in font face in css -->
+<html class="no-js" lang="ru">
 	<head>
 		<meta charset="utf-8" />
+		<!-- <meta http-equiv="x-ua-compatible" content="ie=edge" /> -->
+		<!-- https://content-security-policy.com/ --><meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; connect-src 'self' 'unsafe-inline' https:; frame-src 'self' https:; media-src 'self' https:; img-src 'self' 'unsafe-inline' https: data:" />
 		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="480" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="robots" content="index,follow" />
-		<meta name="author" content="Serguei Shimansky editor@shimansky.biz" />
-		<meta name="keywords" content="Голицынский,английский,английского,английскому,глаголы,диалоги,идиомы,ключи,неправильные,онлайн,ответы,подкасты,репетиторы,рефераты,решебник,скачать,тесты,топики,уроки,MP3,MP4"/>
-		<meta name="description" content="Подсказки по грамматике">
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Подсказки по грамматике</title>
-		<link rel="alternate" media="handheld" href="/pages/grammar/grammar_rough_and_ready_grammar_tips.html" />
-		<link rel="dns-prefetch" href="https://fonts.googleapis.com" /><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" /><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" /><link rel="dns-prefetch" href="https://farm9.staticflickr.com" /><link rel="dns-prefetch" href="https://farm8.staticflickr.com" /><link rel="dns-prefetch" href="https://farm7.staticflickr.com" /><link rel="dns-prefetch" href="https://farm6.staticflickr.com" /><link rel="dns-prefetch" href="https://farm5.staticflickr.com" /><link rel="dns-prefetch" href="https://farm4.staticflickr.com" /><link rel="dns-prefetch" href="https://farm3.staticflickr.com" /><link rel="dns-prefetch" href="https://farm2.staticflickr.com" /><link rel="dns-prefetch" href="https://farm1.staticflickr.com" /><link rel="dns-prefetch" href="https://i.vimeocdn.com" /><link rel="dns-prefetch" href="https://f.vimeocdn.com" /><link rel="dns-prefetch" href="https://w.soundcloud.com" /><link rel="dns-prefetch" href="https://a.disquscdn.com" /><link rel="dns-prefetch" href="https://api-maps.yandex.ru" /><link rel="dns-prefetch" href="https://chart.googleapis.com" /><link rel="dns-prefetch" href="https://connect.mail.ru" /><link rel="dns-prefetch" href="https://connect.ok.ru" /><link rel="dns-prefetch" href="https://disqus.com" /><link rel="dns-prefetch" href="https://graph.facebook.com" /><link rel="dns-prefetch" href="https://mc.yandex.ru" /><link rel="dns-prefetch" href="https://www.google-analytics.com" /><link rel="dns-prefetch" href="https://yastatic.net" /><link rel="dns-prefetch" href="https://audiomack.com" /><link rel="dns-prefetch" href="https://api.audiomack.com" /><link rel="dns-prefetch" href="https://platform.twitter.com" /><link rel="dns-prefetch" href="https://www.instagram.com" /><link rel="dns-prefetch" href="https://api.audiomack.com" />
-		<link rel="apple-touch-startup-image" href="/apple-touch-startup-image-320x460.png" />
-		<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-64x64-precomposed.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon-64x64.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon-72x72-precomposed.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon-57x57-precomposed.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" title="Английский без регистрации" />
-		<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB+UlEQVQ4jY1TPWhTURS+IEokOlgsEU3Nz/3OFAhUwfryzsGADo51eIjFtMk7B0EcXSwOdlBEuzjaQXAoOIpSVIoOHR0cHEVcnLpIKVKINOlzaBISQ1I/uMP9Od/Pufe6yJWOKPFDhWwYuOr6sICwVM9XU24c1PNzQ/hoPhdMK/GP7rqRPDWSRIlfjScoVHLOORdPhacV8t055wyVm0q8reC3SvJxLEGfk2fm+X4td6GgxNv1Is8Z+Fvs+e6BxQtTFW/gzSgbTChkIyZeUS+zRtKMTk1P/oe6vFSEizH4nhF/jbLBUSX+bAhX+8/FJ8Pjc2f5xBBBx+qKEv+qF2coLvIVBe81cPFcTwShGXjHwDvqAwwSFLlhkA/dAoN8UvB6Txl8R8F7RvLbSBL1MjsyToxKYCSJFoPL+/NQDdxWz2sKeWPg9nw2ODO6H+DXBvnScXbDIC31vKbZAEayq8Sjr9UKMxmFtAxyW8GRkewqeL2er6bU85MD7avnq0aSGGTVIC0Fv6vnq6lappxWyJaCf0bOHXJu/+ENExQqOYVsGUlTfbh8y50/3IlVM5IkBj9wzjnz4XUl/qMIF4dIaplyOposHfunLy+MJGnkg0sGXjJw20iasedrI+MMRpNlI0l6A7xp+cGfOxa1TDkdgx8r+L2BlzQbTHT3/gJZI61CvW3NzwAAAABJRU5ErkJggg==" type="image/png" />
-		<link rel="icon" href="/favicon.png" type="image/png" title="Английский без регистрации" />
-		<link rel="icon" href="/favicon.gif" type="image/gif" title="Английский без регистрации" />
-		<link rel="image_src" href="/apple-touch-icon-57x57.png" type="image/png" title="Английский без регистрации" />
-		<link rel="me" href="https://plus.google.com/115554566251160327074p://www.youtube.com/user/shimanskybiz" type="text/html" />
-		<link rel="me" href="http://runet-id.com/78189/" type="text/html" />
-		<link rel="me" href="http://freelansim.ru/freelancers/epishev2" type="text/html" />
-		<link rel="alternate" href="http://feeds.feedburner.com/Shimanskybiz?format=xml" type="application/rss+xml" title="Shimansky.biz (English Without Signing Up) - Articles" />
-		<link rel="alternate" href="/feeds/pages.xml" type="application/rss+xml" title="Shimansky.biz (Английский без регистрации) - Статьи" />
-		<link rel="search" href="https://englishextra.github.io/searchplugins/mycroft/sitesearch.xml" type="application/opensearchdescription+xml" title="Shimansky.biz (Английский без регистрации) - Поиск" />
-		<link rel="me" href="http://www.youtube.com/user/shimanskybiz" type="text/html" />
-		<link rel="me" href="http://runet-id.com/78189/" type="text/html" />
-		<link rel="me" href="http://freelansim.ru/freelancers/epishev2" type="text/html" />
-		<link rel="alternate" href="http://feeds.feedburner.com/Shimanskybiz?format=xml" type="application/rss+xml" title="Shimansky.biz (English Without Signing Up) - Articles" />
-		<link rel="alternate" href="/feeds/pages.xml" type="application/rss+xml" title="Shimansky.biz (Английский без регистрации) - Статьи" />
-		<link rel="search" href="https://englishextra.github.io/searchplugins/mycroft/sitesearch.xml" type="application/opensearchdescription+xml" title="Shimansky.biz (Английский без регистрации) - Поиск" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" />
 		<style>
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {margin:0;padding:0;border-width:0;}
