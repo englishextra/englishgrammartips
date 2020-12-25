@@ -1,6 +1,6 @@
 # englishgrammartips
 
-*English Grammar Tips for Russian Speakers*
+English Grammar Tips for Russian Speakers
 
 *Не претендуя на полный охват, представляем вам сборник кратких подсказок по употреблению грамматики английского языка.*
 
@@ -14,4 +14,3 @@
 ## License
 
 Available under [MIT license](https://opensource.org/licenses/MIT).
-
